@@ -3,8 +3,7 @@ Full stack defi staking application for yield farming, borrowing and lending.
 In this app we can:
 * stakeTokens: add any approved token to the farming contract for yield farming, collateral.
 * unStakeTokens: removes tokens from the contract
-* getRecipientTotalValue: get the total value that users have supplied based on calculation from ChainLink price feeed
-* issueToken: issue a reward to the users for staking in our platform
+* getRecipientTotalValue: get the total value that users have supplied based on calculation from ChainLink price feed
 ## Prerequisites
 * Nodejs
 * npm

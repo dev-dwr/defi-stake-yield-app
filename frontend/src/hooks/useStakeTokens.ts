@@ -1,5 +1,5 @@
 import React from "react"
-import {useEthers, useContractFunction, useNotifications} from "@usedapp/core";
+import {useEthers, useContractFunction} from "@usedapp/core";
 import TokenFarm from "../chain-info/contracts/TokenFarm.json"
 import ERC20 from "../chain-info/contracts/MockERC20.json"
 import networkMapping from "../chain-info/deployments/map.json"
@@ -15,7 +15,6 @@ export const useStakeTokens = (tokenAddress: string) => {
     const {abi} = TokenFarm
     const tokenFarmAddress = chainId ? networkMapping[String(chainId)]["TokenFarm"][0] : constants.AddressZero
     const tokenFarmInterface = new utils.Interface(abi)
-
     const tokenFarmContract = new Contract(tokenFarmAddress,tokenFarmInterface)
 
     const erc20ABI = ERC20.abi
